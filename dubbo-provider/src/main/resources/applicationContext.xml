@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- 定义了提供方应用信息，用于计算依赖关系。在dubbo-admin
+    或 dubbo-monitor 会显示这个名字，方便识别 -->
+    <dubbo:application name="dubbo-provider" owner="admin" organization="dubbo"/>
+    <!-- 使用nacos注册中心暴露服务，注意要先开启 nacos -->
+    <dubbo:registry address="nacos://127.0.0.1:8848"/>
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="20880"/>
+
+    <!--配置服务-->
+    <bean id="demoService" class="com.dubbo.service.impl.DemoServiceImpl"/>
+    <dubbo:service interface="com.dubbo.service.DemoService" ref="demoService"/>
+
+    <bean id="userService" class="com.dubbo.service.impl.UserServiceImpl"/>
+    <dubbo:service interface="com.dubbo.service.UserService" ref="userService"/>
+</beans>
