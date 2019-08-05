@@ -15,15 +15,14 @@ public class Application {
 
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(Application.class);
-        logger.info(">>>>> provider-biz 正在启动 <<<<<");
+        logger.info(">>>>> dubbo-provider starting <<<<<");
         try {
-            ClassPathXmlApplicationContext applicationContext =
-                    new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
-            logger.info(">>>>> provider-biz 启动完成 <<<<<");
+            String configLocation = "classpath:applicationContext.xml";
+            ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(configLocation);
+            logger.info(">>>>> dubbo-provider started <<<<<");
             Thread.sleep(Long.MAX_VALUE);
         } catch (Exception e) {
-            e.printStackTrace();
-            logger.error(">>>>> provider-biz 启动失败!! <<<<<", e);
+            logger.error(">>>>> dubbo-provider start failed!! <<<<<", e);
         }
     }
 }

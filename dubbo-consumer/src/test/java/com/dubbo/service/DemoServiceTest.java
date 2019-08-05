@@ -1,9 +1,9 @@
 package com.dubbo.service;
 
 import org.junit.Test;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import com.dubbo.service.DemoService;
 import test.BaseTest;
 
 import javax.annotation.Resource;
@@ -15,6 +15,7 @@ import javax.annotation.Resource;
  * @date 2019年08月03日
  */
 public class DemoServiceTest extends BaseTest {
+    private static final Logger logger = LoggerFactory.getLogger(DemoServiceTest.class);
     @Resource
     DemoService demoService;
 
@@ -22,6 +23,6 @@ public class DemoServiceTest extends BaseTest {
     public void sayHello() {
         String userName = "Jay";
         String result = demoService.sayHello(userName);
-        System.out.println(result);
+        logger.info(result);
     }
 }
