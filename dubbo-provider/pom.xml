@@ -142,4 +142,7 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+    <build>
+        <finalName>dubbo-provider</finalName>
+    </build>
 </project>
