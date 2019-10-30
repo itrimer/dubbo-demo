@@ -27,7 +27,7 @@
         <com.alibaba.dubbo.version>2.6.7</com.alibaba.dubbo.version>
         <dubbo-registry-nacos.version>2.6.7</dubbo-registry-nacos.version>
         <spring-context-support.version>1.0.2</spring-context-support.version>
-        <netty.version>4.1.32.Final</netty.version>
+        <netty.version>4.1.42.Final</netty.version>
     </properties>
     <dependencyManagement>
         <dependencies>
