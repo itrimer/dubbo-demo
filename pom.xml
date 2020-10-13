@@ -19,7 +19,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- 项目的属性 -->
-        <junit.version>4.11</junit.version>
+        <junit.version>4.13.1</junit.version>
         <spring.version>4.2.5.RELEASE</spring.version>
         <fastjson.version>1.2.22</fastjson.version>
         <slf4j.version>1.7.20</slf4j.version>
