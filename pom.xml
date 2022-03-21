@@ -24,7 +24,7 @@
         <fastjson.version>1.2.22</fastjson.version>
         <slf4j.version>1.7.20</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
-        <com.alibaba.dubbo.version>2.6.7</com.alibaba.dubbo.version>
+        <com.alibaba.dubbo.version>2.6.9</com.alibaba.dubbo.version>
         <dubbo-registry-nacos.version>2.6.7</dubbo-registry-nacos.version>
         <spring-context-support.version>1.0.2</spring-context-support.version>
         <netty.version>4.1.32.Final</netty.version>
